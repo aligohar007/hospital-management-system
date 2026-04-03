@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
-import { Menu, X, Bell, User } from 'lucide-react';
+import { Menu, X, Bell, User, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Modal from './Modal';
 
 const Header = ({ isLanding = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [bellOpen, setBellOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-30">
@@ -39,9 +42,18 @@ const Header = ({ isLanding = false }) => {
           <div className="flex items-center gap-4">
             {!isLanding && (
               <>
-                <button className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full transition">
+                <button
+                  onClick={() => setBellOpen(true)}
+                  className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full transition"
+                >
                   <Bell className="w-5 h-5" />
                   <span className="absolute top-1 right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+                </button>
+                <button
+                  onClick={() => setContactOpen(true)}
+                  className="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition"
+                >
+                  <Phone className="w-5 h-5" />
                 </button>
                 <button className="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition">
                   <User className="w-5 h-5" />
@@ -70,6 +82,38 @@ const Header = ({ isLanding = false }) => {
             </button>
           </div>
         </div>
+
+        <Modal
+          isOpen={bellOpen}
+          onClose={() => setBellOpen(false)}
+          title="Notifications"
+        >
+          <p className="text-gray-700">Please do this. Thanks!</p>
+        </Modal>
+
+        <Modal
+          isOpen={contactOpen}
+          onClose={() => setContactOpen(false)}
+          title="Contact List"
+        >
+          <ul className="space-y-3">
+            <li className="rounded-lg p-3 bg-gray-50 border border-gray-200">
+              <h3 className="text-sm font-semibold text-gray-900">Support Team</h3>
+              <p className="text-sm text-gray-600">support@healthhub.com</p>
+              <p className="text-xs text-gray-500">Mon-Fri, 9am-6pm</p>
+            </li>
+            <li className="rounded-lg p-3 bg-gray-50 border border-gray-200">
+              <h3 className="text-sm font-semibold text-gray-900">Sales</h3>
+              <p className="text-sm text-gray-600">sales@healthhub.com</p>
+              <p className="text-xs text-gray-500">Mon-Fri, 9am-6pm</p>
+            </li>
+            <li className="rounded-lg p-3 bg-gray-50 border border-gray-200">
+              <h3 className="text-sm font-semibold text-gray-900">Emergency</h3>
+              <p className="text-sm text-gray-600">+1 (123) 456-7890</p>
+              <p className="text-xs text-gray-500">24/7 Hotline</p>
+            </li>
+          </ul>
+        </Modal>
 
         {/* Mobile Navigation */}
         {menuOpen && isLanding && (

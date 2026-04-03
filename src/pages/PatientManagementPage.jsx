@@ -172,7 +172,7 @@ const PatientManagementPage = () => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  <div>
+                  <div className='mb-3'>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Blood Type</label>
                     <select
                       name="bloodType"
@@ -198,16 +198,16 @@ const PatientManagementPage = () => {
                   name="address"
                   value={formData.address}
                   onChange={handleInputChange}
-                  className="mt-4"
+                  // className="mt-4"
                 />
-                <Input
+                {/* <Input
                   label="Diagnosis"
                   placeholder="Primary diagnosis"
                   name="diagnosis"
                   value={formData.diagnosis}
                   onChange={handleInputChange}
                   className="mt-4"
-                />
+                /> */}
               </div>
 
               {/* Buttons */}
