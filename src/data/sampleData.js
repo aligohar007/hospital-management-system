@@ -1,0 +1,190 @@
+export const DOCTORS = [
+  {
+    id: 1,
+    name: 'Dr. Sarah Johnson',
+    specialty: 'Cardiologist',
+    rating: 4.8,
+    phone: '+1 (555) 123-4567',
+    email: 'sarah.johnson@hospital.com',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+    available: true,
+  },
+  {
+    id: 2,
+    name: 'Dr. Michael Chen',
+    specialty: 'Neurologist',
+    rating: 4.9,
+    phone: '+1 (555) 234-5678',
+    email: 'michael.chen@hospital.com',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+    available: true,
+  },
+  {
+    id: 3,
+    name: 'Dr. Emily Rodriguez',
+    specialty: 'Orthopedic Surgeon',
+    rating: 4.7,
+    phone: '+1 (555) 345-6789',
+    email: 'emily.rodriguez@hospital.com',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+    available: false,
+  },
+  {
+    id: 4,
+    name: 'Dr. James Wilson',
+    specialty: 'Pediatrician',
+    rating: 4.6,
+    phone: '+1 (555) 456-7890',
+    email: 'james.wilson@hospital.com',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
+    available: true,
+  },
+];
+
+export const PATIENTS = [
+  {
+    id: 1,
+    name: 'John Doe',
+    email: 'john.doe@email.com',
+    phone: '+1 (555) 111-2222',
+    status: 'active',
+    lastVisit: '2024-03-15',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    email: 'jane.smith@email.com',
+    phone: '+1 (555) 222-3333',
+    status: 'active',
+    lastVisit: '2024-03-10',
+  },
+  {
+    id: 3,
+    name: 'Robert Johnson',
+    email: 'robert.j@email.com',
+    phone: '+1 (555) 333-4444',
+    status: 'active',
+    lastVisit: '2024-02-28',
+  },
+  {
+    id: 4,
+    name: 'Maria Garcia',
+    email: 'maria.garcia@email.com',
+    phone: '+1 (555) 444-5555',
+    status: 'inactive',
+    lastVisit: '2024-01-15',
+  },
+  {
+    id: 5,
+    name: 'David Brown',
+    email: 'david.brown@email.com',
+    phone: '+1 (555) 555-6666',
+    status: 'active',
+    lastVisit: '2024-03-20',
+  },
+];
+
+export const APPOINTMENTS = [
+  {
+    id: 1,
+    patientName: 'John Doe',
+    doctorName: 'Sarah Johnson',
+    date: '2024-04-05',
+    time: '10:00 AM',
+    status: 'scheduled',
+    type: 'Consultation',
+  },
+  {
+    id: 2,
+    patientName: 'Jane Smith',
+    doctorName: 'Michael Chen',
+    date: '2024-04-05',
+    time: '02:00 PM',
+    status: 'scheduled',
+    type: 'Follow-up',
+  },
+  {
+    id: 3,
+    patientName: 'Robert Johnson',
+    doctorName: 'Emily Rodriguez',
+    date: '2024-04-06',
+    time: '11:30 AM',
+    status: 'pending',
+    type: 'Checkup',
+  },
+  {
+    id: 4,
+    patientName: 'Maria Garcia',
+    doctorName: 'James Wilson',
+    date: '2024-04-07',
+    time: '03:30 PM',
+    status: 'completed',
+    type: 'Vaccination',
+  },
+  {
+    id: 5,
+    patientName: 'David Brown',
+    doctorName: 'Sarah Johnson',
+    date: '2024-04-08',
+    time: '09:00 AM',
+    status: 'scheduled',
+    type: 'Lab Test Review',
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Alice Thompson',
+    role: 'Patient',
+    message: 'Excellent healthcare services with professional doctors. Highly satisfied with the treatment and care provided.',
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: 'David Martinez',
+    role: 'Patient',
+    message: 'The hospital staff is very friendly and the facilities are top-notch. Great experience overall!',
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: 'Emma Wilson',
+    role: 'Patient',
+    message: 'Clean environment, qualified doctors, and efficient management. Would definitely recommend to others.',
+    rating: 4,
+  },
+];
+
+export const FEATURES = [
+  {
+    title: 'Patient Management',
+    description: 'Comprehensive patient records and history management',
+    icon: '👥',
+  },
+  {
+    title: 'Appointment Scheduling',
+    description: 'Easy online booking and appointment management',
+    icon: '📅',
+  },
+  {
+    title: 'Doctor Directory',
+    description: 'Find and connect with qualified healthcare professionals',
+    icon: '👨‍⚕️',
+  },
+  {
+    title: 'Medical Records',
+    description: 'Secure digital storage of medical history and reports',
+    icon: '📋',
+  },
+  {
+    title: 'Prescription Management',
+    description: 'Online prescription delivery and medication tracking',
+    icon: '💊',
+  },
+  {
+    title: 'Real-time Updates',
+    description: 'Instant notifications for appointments and health alerts',
+    icon: '🔔',
+  },
+];
